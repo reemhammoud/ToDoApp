@@ -11,7 +11,7 @@
 <body>
     <h1 class="display-3 text-center mt-5">ToDo App</h1>
     <div class="container col-9">
-        <form method="post" class="d-inline mr-1" action="https://to-do-app-0000.herokuapp.com/task">
+        <form method="post" class="d-inline mr-1" action="https://mindmanager.herokuapp.com/task">
             <div class="form-group mt-5">
               <label for="new-task">Enter a task:</label>
               <input type="text" class="form-control" name="desc" id="Task">
@@ -36,10 +36,10 @@
                         <td><%=task.description%></td>
                         <td><%=task.isComplete? "Complete" : "In progress"%></td>
                         <td>
-                            <form method="post" class="d-inline" action="https://to-do-app-0000.herokuapp.com/task/<%=task._id.toString()%>?_method=DELETE">
+                            <form method="post" class="d-inline" action="https://mindmanager.herokuapp.com/task/<%=task._id.toString()%>?_method=DELETE">
                                 <button type="submit" class="btn btn-danger mr-0 mr-lg-1 mb-2 mb-lg-0">Delete</button>
                             </form>
-                            <form method="post" class="d-inline" action="https://to-do-app-0000.herokuapp.com/task/<%=task._id.toString()%>?_method=PUT">
+                            <form method="post" class="d-inline" action="https://mindmanager.herokuapp.com/task/<%=task._id.toString()%>?_method=PUT">
                                 <button type="submit" class="btn btn-success"><%= task.isComplete? "Incomplete" : "Completed"%></button>
                             </form>
                         </td>
